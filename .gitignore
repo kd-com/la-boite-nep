@@ -7,15 +7,16 @@
 # you can delete this whole section/until Configuration.
 /wp-admin/
 /wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
+cle
+cle.pub
 /wp-includes/
 /index.php
 /license.txt
 /readme.html
-/wp-*.php
 /xmlrpc.php
+.DS_Store
+._readme.html
+._wp-config-sample.php
 
 # Configuration
 wp-config.php
