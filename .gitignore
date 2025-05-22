@@ -17,6 +17,7 @@ cle.pub
 .DS_Store
 ._readme.html
 ._wp-config-sample.php
+.gif
 
 # Configuration
 wp-config.php

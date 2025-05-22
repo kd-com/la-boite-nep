@@ -1,0 +1,427 @@
+/* 
+ Theme Name:     KD-COM
+ Author:         Kevin Deffay-Communication
+ Author URI:     https://www.kd-com.fr
+ Template:       Divi
+ Version:        1.0
+ Description:   Thème enfant pour DIVI
+*/ 
+
+
+/* ----------- PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE --------------------------- */ 
+/* couleurs du theme */
+.has-couleur-theme-1-color {
+  color: #13454a; }
+
+.has-couleur-theme-2-color {
+  color: #2d9697; }
+
+.has-couleur-theme-3-color {
+  color: #cca13f; }
+
+.has-couleur-theme-4-color {
+  color: #fff; }
+
+
+
+.has-background {
+  margin: 1.25em 1.25em;
+  padding: 1.25em 2.375em !important; }
+
+.has-couleur-theme-1-background-color {
+  background-color: #13454a; }
+
+.has-couleur-theme-2-background-color {
+  background-color: #2d9697; }
+
+.has-couleur-theme-3-background-color {
+  background-color: #cca13f; }
+
+/*******************************************************/
+/* tarteaucitron */
+/*******************************************************/
+#tarteaucitronAlertBig #tarteaucitronPersonalize,
+#tarteaucitronRoot #tarteaucitronPercentage,
+#tarteaucitronAlertSmall #tarteaucitronManager #tarteaucitronDot #tarteaucitronDotGreen {
+background: #efecd9 !important;
+}
+#tarteaucitronAlertBig {
+background-color: rgba(0,0,0,0.8) !important;
+}
+#tarteaucitronDisclaimerAlert, #tarteaucitronDisclaimerAlert strong, #tarteaucitronAlertBig #tarteaucitronPrivacyUrl {
+color: #fff !important;
+}
+#tarteaucitronAlertSmall {
+background-color: rgba(0,0,0,0.5) !important;
+}
+#tarteaucitronAlertBig #tarteaucitronPersonalize, #tarteaucitronAlertBig #tarteaucitronCloseAlert {
+border-radius: 3px !important;
+}
+
+/* PRELOADER */ 
+.preloader {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #fefefe;
+   z-index: 100000;
+   height: 100%;
+   width: 100%;
+   overflow: hidden !important;
+}
+.preloader .status {
+   width: 100px;
+   height: 100px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   background-image: url(img/picto_logo.gif);
+   background-repeat: no-repeat;
+   background-position: center;
+   -webkit-background-size: cover;
+   background-size: cover;
+   margin: -50px 0 0 -50px;
+}
+
+
+/* GESTION AFFICHAGE MENU MON COMPTE et MENU FOOTER */
+#mon-compte .et_pb_menu__menu, #footer-menu .et_pb_menu__menu {display:block !important;}
+#mon-compte .et_mobile_nav_menu, #footer-menu .et_mobile_nav_menu {display:none !important;}
+#footer-menu nav ul {flex-direction:column;}
+#footer-menu .et_pb_menu__wrap {justify-content:flex-start !important;}
+
+/* AFFICHAGE ACCROCHE HEADER */
+strong.jaune {color:#cca13f}
+
+/* GESTION AFIFHCAGE MENU */
+.row-menu-first-line {
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+@media all and (min-width: 980px) {
+#header-first-column {
+width: 15% !important;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+ 
+#header-second-column {
+width: 85% !important;
+}
+}
+ 
+@media all and (max-width: 980px) {
+#header-first-column {
+display: none;
+}
+}
+.et_pb_fullwidth_menu .et_pb_menu__wrap, .et_pb_menu .et_pb_menu__wrap {justify-content:space-between}
+
+/* COURBE HEADER COULEURS */
+@media (min-width:60em) {
+	.courbe-verte:before {
+	content: '';
+    display: block;
+    position: absolute;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiMxMzQ1NEEiPjxwYXRoIGQ9Ik0wIDE0MGgxMjgwQzU3My4wOCAxNDAgMCAwIDAgMHoiLz48L2c+PC9zdmc+);
+    background-size: 100% 100px;
+    top: -100px;
+    height: 100px;
+    z-index: 1;
+    left: 0;
+    right: 0;
+	}
+	.courbe-jaune:before {
+	content: '';
+    display: block;
+    position: absolute;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNDQ0ExM0YiPjxwYXRoIGQ9Ik0wIDE0MGgxMjgwQzU3My4wOCAxNDAgMCAwIDAgMHoiLz48L2c+PC9zdmc+);
+    background-size: 100% 100px;
+    top: -100px;
+    height: 100px;
+    z-index: 1;
+    transform: rotateY(180deg);
+    left:0;
+    right: 0;
+	}
+}
+
+/* WOO COMMERCE QUANTITÉ */
+.woocommerce input[type=number]::-webkit-inner-spin-button,
+.woocommerce input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.woocommerce input[type=number].qty {
+    -moz-appearance: textfield;
+}
+
+.woocommerce-page div.product form.cart div.quantity {
+    border-radius: 0px!important;
+}
+
+.woocommerce .quantity {
+    border: 2px solid #eee!important;
+    width: 128px!important;
+    display:inline-block;
+}
+
+.woocommerce .quantity input.qty, .woocommerce .quantity .minus, .woocommerce .quantity .plus {
+    line-height: 16px;
+    height: 40px!important;
+    background-color: #fff!important;
+    color: inherit!important;
+    padding:0!important;
+    float:left;
+    border-radius: 0px!important;
+}
+
+.woocommerce .quantity .minus, .woocommerce .quantity .plus {
+    border:none!important;
+    cursor: pointer;
+    width: 40px!important;
+}
+
+.woocommerce .quantity .minus:hover, .woocommerce .quantity .plus:hover {
+    background-color: #eee!important;
+}
+
+.woocommerce .quantity input.qty {
+    border-left: 2px solid #eee!important;
+    border-right: 2px solid #eee!important;
+    width: 44px!important;
+}
+
+div.quantity.hidden {
+  border:none!important;
+}
+
+/* WOOCOMMERCE BTN PAGE BOUTIQUE */
+a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {display:block !important;text-align:center; margin-bottom:0.8rem}
+
+/* AFFICHAGE PAGE BLOG */
+:root {
+    --ds-white: #ffffff; 
+    --ds-grid-2-item: 250px; 
+    --ds-grid-gap: 30px; 
+    --ds-title-background: rgba(0, 0, 0, .5);
+}
+
+
+/******************************************************/
+/*You should not need to edit anything below this line*/
+/******************************************************/
+
+
+/*Set posts to flex and remove post margin*/
+
+.ds-grid-blog .et_pb_post {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0;
+}
+
+
+/*Set flex direction for second grid*/
+
+.ds-grid-blog-2 .et_pb_post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+/*Set post content to flex*/
+
+.ds-grid-blog-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background: var(--ds-white);
+}
+
+
+/*Remove image margin and resize for responsiveness*/
+
+.ds-grid-blog .entry-featured-image-url {
+    margin-bottom: 0;
+    height: 100%;
+    width: auto;
+}
+
+.ds-grid-blog .et_pb_post a img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+
+/*Reset the read more link display*/
+
+.ds-grid-blog a.more-link {
+    display: initial;
+}
+
+
+/*Add margin to excerpt*/
+
+.ds-grid-blog .post-content p {
+    margin-bottom: 20px;
+}
+
+
+/*Pagination placement*/
+
+.ds-grid-blog .pagination {
+    grid-column: 1/-1;
+}
+
+
+/*Set the grid for the first 3 posts*/
+
+.ds-grid-blog-1 .et_pb_ajax_pagination_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: var(--ds-grid-gap);
+}
+
+
+/*Set the grid for the remaining posts*/
+
+.ds-grid-blog-2 .et_pb_ajax_pagination_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--ds-grid-2-item), 1fr));
+    grid-gap: var(--ds-grid-gap);
+}
+
+
+/*First grid first post placement*/
+
+.ds-grid-blog-1 .et_pb_post:first-child {
+    grid-column: 1 / -1;
+}
+
+
+/*First grid second post placement*/
+
+.ds-grid-blog-1 .et_pb_post:nth-child(2) {
+    grid-column: 1 / 2;
+}
+
+
+/*First grid third post placement*/
+
+.ds-grid-blog-1 .et_pb_post:nth-child(3) {
+    grid-column: 2 / 3;
+}
+
+
+/*First post content*/
+
+.ds-grid-blog-1 .et_pb_post:first-child .ds-grid-blog-content {
+    width: 60%;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+
+/*Position and colour for second & third posts*/
+
+.ds-grid-blog-1 .et_pb_post:nth-child(n+2) .ds-grid-blog-content {
+    background: var(--ds-title-background);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*Text colour for second & third posts*/
+
+.ds-grid-blog-1 .et_pb_post:nth-child(n+2) .entry-title,
+.ds-grid-blog-1 .et_pb_post:nth-child(n+2) .post-meta,
+.ds-grid-blog-1 .et_pb_post:nth-child(n+2) .post-meta a {
+    color: var(--ds-white) !important;
+}
+
+
+/*Font size for second & third posts*/
+
+.ds-grid-blog-1 .et_pb_post:nth-child(n+2) .entry-title {
+    font-size: 150% !important;
+}
+
+
+/*Hide excerpt for second & third posts and second grid posts*/
+
+.ds-grid-blog-1 .et_pb_post:nth-child(n+2) .post-content,
+.ds-grid-blog-2 .et_pb_post .post-content p {
+    display: none;
+}
+
+
+/*Remaining posts display*/
+
+.ds-grid-blog-2 .et_pb_post .ds-grid-blog-content {
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+/*marge*/
+
+.ds-grid-blog-2 .et_pb_post .entry-title {
+    margin-bottom: 30px;
+}
+
+
+/*lire la suite en bas*/
+
+.ds-grid-blog-2 .et_pb_post .post-content {
+    margin-top: auto;
+}
+
+
+/*mobile*/
+
+@media all and (max-width:980px) {
+    .ds-grid-blog-1 .et_pb_post:first-child {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .ds-grid-blog-1 .et_pb_post:first-child .ds-grid-blog-content {
+        width: 100%;
+    }
+    .ds-grid-blog-1 .et_pb_post {
+        grid-column: 1 / -1 !important;
+    }
+}
