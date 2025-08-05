@@ -16,7 +16,7 @@
   z-index: 99;
   box-sizing: border-box;
   width: 50%;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.8);
   float: left;
   left: calc(5% - 1em);
   position: absolute;
@@ -205,6 +205,11 @@ h2 {
   }
   .hero-slider {
     margin-bottom: 9em;
+  }
+}
+@media screen and (min-width: 1380px) {
+  .hero-slider {
+    margin-bottom: 5em;
   }
 }
 .hero-style .slide-title,
@@ -435,6 +440,21 @@ h2 {
   padding-top: 0 !important;
 }
 
+li.btn {
+  background: #cca13f;
+  color: #ffffff;
+  top: -10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+li.btn:hover {
+  background: #13454a;
+  color: #ffffff;
+}
+li a {
+  padding-bottom: 0 !important;
+}
+
 /* couleurs du theme */
 .has-couleur-theme-1-color {
   color: #13454a;
@@ -537,6 +557,10 @@ h2 {
 
 #footer-menu .et_pb_menu__wrap {
   justify-content: flex-start !important;
+}
+
+#footer-menu li.btn {
+  background: none;
 }
 
 /* AFFICHAGE ACCROCHE HEADER */

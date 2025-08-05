@@ -21,6 +21,23 @@
     }
 }
 
+li {
+    &.btn {
+        background:$couleur-theme-accent;
+        color:$blanc;
+        top: -10px;
+        padding: 10px;
+        transition:all .3s ease;
+        &:hover {
+            background:$couleur-theme-principale;
+            color:$blanc;
+        }
+    }
+    a {
+        padding-bottom:0 !important
+    }
+}
+
 
 /* couleurs du theme */
 .has-couleur-theme-1-color {
@@ -104,6 +121,16 @@ border-radius: 3px !important;
 #mon-compte .et_mobile_nav_menu, #footer-menu .et_mobile_nav_menu {display:none !important;}
 #footer-menu nav ul {flex-direction:column;}
 #footer-menu .et_pb_menu__wrap {justify-content:flex-start !important;}
+
+#footer-menu {
+    li {
+    &.btn {
+        background:none;
+        
+    }
+    
+}
+}
 
 /* AFFICHAGE ACCROCHE HEADER */
 strong.jaune {color:#cca13f}
