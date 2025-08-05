@@ -466,6 +466,9 @@ li.btn:hover {
   background: #13454a;
   color: #ffffff;
 }
+li.btn.current-menu-item {
+  background: #ffffff;
+}
 li a {
   padding-bottom: 0 !important;
 }

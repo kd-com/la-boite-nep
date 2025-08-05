@@ -49,7 +49,12 @@ li {
             background:$couleur-theme-principale;
             color:$blanc;
         }
+        &.current-menu-item {
+        background:$blanc;
+        
+        }
     }
+    
     a {
         padding-bottom:0 !important
     }
