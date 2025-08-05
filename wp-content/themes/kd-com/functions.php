@@ -7,13 +7,23 @@ function my_enqueue_assets() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css');
 
-} 
+}
+// Enqueue Swiper.js Library
+      function dp_carousel(){
+        wp_enqueue_script( 'your-swiper-js-slug', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [] , '7.4.1', true );
+        wp_enqueue_style( 'your-swiper-css-slug', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [] , '7.4.1');
+       
+        
+       }
+       add_action('init', 'dp_carousel', 99);
 	// Déclarer un autre fichier JS
 add_action( 'wp_enqueue_scripts', 'custom_enqueue_script' );
       function custom_enqueue_script() {
             wp_enqueue_script( 'script', get_bloginfo( 'stylesheet_directory' ) . '/script.js', 
             array( 'jquery' ), '', true );
       }
+
+
 
 // VOIR LA CATEGORIE PRODUIT SUR LA PAGE BOUTIQUE
 add_action( 'woocommerce_before_shop_loop_item_title', 'add_categoryname_product_loop', 25);
@@ -198,6 +208,35 @@ function kd_tarteaucitron_services() {
 }
 add_action('wp_footer', 'kd_tarteaucitron_services');
 
+// ajout du module slider accueil
+//include 'module_admin/slider_accueil.php';
+//include 'module_front/slider_page_accueil.php';
+// CREATION DU MODULE SLIDER PAGE D'ACCUEIL
+function create_slider_accueil() {       
+
+
+        // SLIDER PAGE D'ACCUEIL
+
+  $labels = array(
+    'name' => 'Slider page d\'accueil'
+  );
+
+  $args = array(
+    'labels' => $labels,
+    'public' => true,
+    'exclude_from_search' => true, // the important line here!
+    'has_archive' => false,
+          'show_in_rest' => true, //important !
+          'supports' => array('title'),
+          'menu_position' => 2,
+          'menu_icon' => 'dashicons-tagcloud',
+
+        );
+  register_post_type('slider', $args);
+}
+add_action('init', 'create_slider_accueil' );
+
+include 'module_front/slider_page_accueil.php';
 
 
 
