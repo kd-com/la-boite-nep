@@ -238,6 +238,18 @@ add_action('init', 'create_slider_accueil' );
 
 include 'module_front/slider_page_accueil.php';
 
+// desactiver gutenberg sur la page d'accueil
+function disable_block_editor_for_page_ids( $use_block_editor, $post ) {
+
+  $acf_accueil = 227;
+  $excluded_ids = array( $acf_accueil);
+  if ( in_array( $post->ID, $excluded_ids ) ) {
+    return false;
+  }
+  return $use_block_editor;
+}
+add_filter( 'use_block_editor_for_post', 'disable_block_editor_for_page_ids', 10, 2 );   
+
 
 
 ?>

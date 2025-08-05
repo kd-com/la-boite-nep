@@ -436,8 +436,23 @@ h2 {
   z-index: 9;
 }
 
-.page-id-522521 .et_pb_section_0_tb_body.et_pb_section {
+.home .et_pb_section_0_tb_body.et_pb_section {
   padding-top: 0 !important;
+}
+
+.et-l--header .et_pb_section {
+  padding: 0 !important;
+}
+.et-l--header .et_pb_section .et_pb_row {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.et-l--header .et_pb_section .et_pb_row .et_pb_column_single {
+  padding: 0 !important;
+}
+.et-l--header .et_pb_section .et_pb_row .et_pb_menu__wrap {
+  justify-content: space-between !important;
 }
 
 li.btn {
