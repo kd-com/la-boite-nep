@@ -10,9 +10,16 @@
 
 /* ----------- PUT YOUR CUSTOM CSS BELOW THIS LINE -- DO NOT EDIT ABOVE THIS LINE --------------------------- */ 
 @import "couleurs.scss";
+@import "slider.scss";
 
 
-
+.page-id-522521 {
+    .et_pb_section_0_tb_body {
+        &.et_pb_section {
+            padding-top: 0 !important;
+        }
+    }
+}
 
 
 /* couleurs du theme */
@@ -166,6 +173,7 @@ display: none;
 
 .woocommerce input[type=number].qty {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 .woocommerce-page div.product form.cart div.quantity {
