@@ -23,7 +23,11 @@ add_action( 'wp_enqueue_scripts', 'custom_enqueue_script' );
             array( 'jquery' ), '', true );
       }
 
-
+// acitvation shortcode acf
+add_action( 'acf/init', 'set_acf_settings' );
+function set_acf_settings() {
+    acf_update_setting( 'enable_shortcode', true );
+}
 
 // VOIR LA CATEGORIE PRODUIT SUR LA PAGE BOUTIQUE
 add_action( 'woocommerce_before_shop_loop_item_title', 'add_categoryname_product_loop', 25);
@@ -70,12 +74,12 @@ add_theme_support( 'disable-custom-gradients' );
 add_theme_support( 'editor-gradient-presets', array() );
 
 // VOIR LA DESCRIPTION COURTE SUR LA PAGE BOUTIQUE
-add_action( 'woocommerce_after_shop_loop_item', 'woo_show_excerpt_shop_page', 5 );
-function woo_show_excerpt_shop_page() {
-	global $product;
+// add_action( 'woocommerce_after_shop_loop_item', 'woo_show_excerpt_shop_page', 5 );
+// function woo_show_excerpt_shop_page() {
+// 	global $product;
 
-	echo $product->post->post_excerpt;
-}
+// 	echo $product->post->post_excerpt;
+// }
 // VOIR LE BOUTON AJOUTER AU PANIER SUR LA PAGE BOUTIQUE
 function wnc_add_cart_button () {
 

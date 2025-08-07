@@ -473,6 +473,24 @@ li a {
   padding-bottom: 0 !important;
 }
 
+@media (max-width: 767px) {
+  #et-boc .et-l .et_pb_shop ul.products.columns-4 li.product {
+    width: 100% !important;
+    margin: 0 0 1.5em !important;
+  }
+}
+@media (max-width: 768px) {
+  #et-boc .et-l .et_pb_shop ul.products.columns-4 li.product {
+    width: 48% !important;
+    margin: 0 0 1.5em !important;
+  }
+}
+@media (max-width: 1024px) {
+  #et-boc .et-l .et_pb_shop ul.products.columns-4 li.product {
+    width: 33.33% !important;
+    margin: 0 0 1.5em !important;
+  }
+}
 /* couleurs du theme */
 .has-couleur-theme-1-color {
   color: #13454a;
