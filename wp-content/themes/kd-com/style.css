@@ -436,6 +436,14 @@ h2 {
   z-index: 9;
 }
 
+img.img-responsive {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  z-index: -1;
+}
+
 .home .et_pb_section_0_tb_body.et_pb_section {
   padding-top: 0 !important;
 }

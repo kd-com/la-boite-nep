@@ -29,6 +29,25 @@ function set_acf_settings() {
     acf_update_setting( 'enable_shortcode', true );
 }
 
+//  AJOUT DE LA PHOTO EN AVANT PAGE BOUTIQUE ET SI CATÉGORIE PRODUIT AFFICHAGE IMAGE CATEGORIE
+function wpturbo_get_shop_page_featured_image() {
+    $shop_page_id = get_option( 'woocommerce_shop_page_id' );
+    $thumbnail_id = get_post_thumbnail_id( $shop_page_id );
+
+    if ( $thumbnail_id ) {
+        $image = wp_get_attachment_image( $thumbnail_id, 'full', false, [ "class" => "img-responsive" ] );
+        return $image;
+    }
+
+    return '';
+}
+
+function wpturbo_register_shortcodes() {
+    add_shortcode( 'shop_page_featured_image', 'wpturbo_get_shop_page_featured_image' );
+}
+
+add_action( 'init', 'wpturbo_register_shortcodes' );
+
 // VOIR LA CATEGORIE PRODUIT SUR LA PAGE BOUTIQUE
 add_action( 'woocommerce_before_shop_loop_item_title', 'add_categoryname_product_loop', 25);
 function add_categoryname_product_loop()
