@@ -71,7 +71,7 @@ li {
 }
 
 // mobile version boutique sur une seule colonne
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     #et-boc {
         .et-l {
             .et_pb_shop {
@@ -80,7 +80,7 @@ li {
                         &.columns-4 {
                             li {
                                 &.product {
-                                width: 100% !important;
+                                width: 33.33% !important;
                                 margin: 0 0 1.5em !important;
                             }
                             }
@@ -111,7 +111,7 @@ li {
         }
     }
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
     #et-boc {
         .et-l {
             .et_pb_shop {
@@ -120,7 +120,7 @@ li {
                         &.columns-4 {
                             li {
                                 &.product {
-                                width: 33.33% !important;
+                                width: 100% !important;
                                 margin: 0 0 1.5em !important;
                             }
                             }
@@ -131,6 +131,8 @@ li {
         }
     }
 }
+
+
 
 /* couleurs du theme */
 .has-couleur-theme-1-color {
@@ -370,6 +372,15 @@ a.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {display:block 
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+}
+.ds-grid-blog-2 {
+    .et_pb_post {
+        a {
+            img {
+                max-height:210px;
+            }
+        }
+    }
 }
 
 

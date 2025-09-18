@@ -1,4 +1,11 @@
+#main-content {
+    margin-top:110px;
+}
+
 @media (max-width: 768px) {
+    #main-content {
+        margin-top:60px !important;
+    }
    .menu_col_1 {
         max-width:20%;
         width:20%;
@@ -23,5 +30,10 @@
         max-width: 20%;
         align-items:center;
         justify-content:flex-end;
+    }
+}
+.menu-col-3 {
+    .et-pb-icon {
+    font-size:29px !important;
     }
 }
