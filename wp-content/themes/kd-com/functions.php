@@ -118,38 +118,8 @@ add_action('login_head', 'my_custom_login_logo');
 
 
 // ajout bloc sur dashboard wp
-// Register our custom dashboard widget.
-function kdcom_add_my_dashboard_widget() {
-  wp_add_dashboard_widget( 
-    "kdcom_guide-utilisation",
-    "Un problème, une question ?",
-    "kdcom_render_my_dashboard_widget"
-  );
+include 'dashboardbloc.php';
 
-  // Force this widget to the top.
-  global $wp_meta_boxes;
-
-  // Make a backup of the current instance of our widget.
-  $normal_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
-  $widget_backup = array( 'kdcom_guide-utilisation' => $normal_dashboard['kdcom_guide-utilisation'] );
-
-  // Now remove the original widget from the array.
-  unset( $normal_dashboard['kdcom_guide-utilisation'] );
-
-  // Merge the two arrays together so our widget is at the top.
-  $sorted_dashboard = array_merge( $widget_backup, $normal_dashboard );
-  $wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
-}
-// Add the function to the 'wp_dashboard_setup' action to make sure it executes after the theme.
-add_action( 'wp_dashboard_setup', 'kdcom_add_my_dashboard_widget' );
-
-// Create the function to output the contents of our Dashboard Widget.
-function kdcom_render_my_dashboard_widget () {
-  // The code to render your widget goes here...
-  echo '<p><strong>Bienvenue sur votre site internet !</strong></p>';
-  echo '<p>Vous trouverez sur le lien suivant le guide d\'utilisation pour la gestion de votre site internet<br><a href="https://drive.google.com/file/d/1QI8VUgcHHlLdFSOurW__Y2fZ9Gtvk82B/view?usp=share_link" target="_blank">Télécharger votre guide</a></p>';
-  echo '<p>Besoin d\'aide ? Contactez KD-COM <a href="mailto:contact@kd-com.fr">en cliquant ici</a>.</p>';
-}
 
 // AJOUT DE TARTEAUCITRON
 function kd_tarteaucitron_load() {

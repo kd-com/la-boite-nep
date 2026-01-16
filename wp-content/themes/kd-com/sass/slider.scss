@@ -18,6 +18,21 @@
   transition: backdrop-filter 0.9s;
   transition: backdrop-filter 0.9s, -webkit-backdrop-filter 0.9s;
   padding:20px !important;
+
+  &.no-text {
+    width: 100%;
+    background: none;
+    backdrop-filter: none;
+    float: none;
+    left: auto;
+
+    .slide-btns {
+      .et_pb_button {
+        font-size: 19px;
+        font-weight: 800;
+      }
+    }
+  }
  
 }
 .slide-bg-image {

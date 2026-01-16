@@ -1,0 +1,37 @@
+// Cible le bloc Gutenberg "Fichier" pour les PDF
+.wp-block-file {
+  // Réinitialise les styles par défaut
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+
+  // Cible l'élément <object> qui embarque le PDF
+  .wp-block-file__embed {
+    width: 100%;
+    height: 600px; // Hauteur fixe, ajustez selon vos besoins
+    display: block;
+
+    // Assure la réactivité
+    @media (max-width: 768px) {
+      height: 400px; // Hauteur réduite sur mobile
+    }
+  }
+
+  // Masque le wrapper vidéo fluide (inutile pour un PDF)
+  .fluid-width-video-wrapper {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    object {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 800px;
+    }
+  }
+
+}

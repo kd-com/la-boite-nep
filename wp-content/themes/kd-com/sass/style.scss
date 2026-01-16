@@ -12,6 +12,14 @@
 @import "couleurs.scss";
 @import "slider.scss";
 @import "gestion-menu.scss";
+@import "block-interactif.scss";
+
+
+
+// hauteur de ligne du texte {
+body {
+    line-height:1.6em !important;
+}
 
 // image page boutique
 img {
@@ -21,6 +29,11 @@ img {
     max-height: 450px;
     object-fit: cover;
     z-index: -1;
+    }
+}
+.et_pb_post {
+    p {
+        line-height:1.6em !important;
     }
 }
 .home {

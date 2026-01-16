@@ -94,6 +94,17 @@ function show_slider_accueil_shortcode() {
                                                 </div>
                                             <?php } ?>
                                         </div>
+                                    <?php } else { ?>
+                                        <div class="container hero no-text">
+                                            <?php if(get_field('lien_slider')) { ?>
+                                                <div class="slide-btns et_pb_bg_layout_dark violet-fond" data-swiper-parallax="500">
+                            
+                                                    <a class="et_pb_button" href="<?= the_field('lien_slider'); ?>">
+                                                        <?php the_field('texte_bouton_slider'); ?>
+                                                    </a>
+                                                </div>
+                                            <?php } ?>
+                                        </div>
                                     <?php } ?>
                                 </div>
                             </div>
