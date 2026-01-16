@@ -511,6 +511,206 @@ h2 {
   height: 800px;
 }
 
+/* ============================================
+   CSS PERSONNALISÉ POUR BLOCK GUTENBERG WOOCOMMERCE
+   Correspondance avec le style de laboiteanep.com
+   ============================================ */
+/* Container principal */
+.wc-block-product-template__responsive {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Item produit */
+.wc-block-product {
+  background: #ffffff;
+  border-radius: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.wc-block-product:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Image produit */
+.wc-block-components-product-image {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.wc-block-components-product-image a {
+  display: block;
+  position: relative;
+}
+
+.wc-block-components-product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.wc-block-product:hover .wc-block-components-product-image img {
+  transform: scale(1.05);
+}
+
+/* Titre produit */
+.wp-block-post-title {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 15px 0 10px 0;
+  padding: 0 15px;
+  text-align: center;
+}
+
+.wp-block-post-title a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: block;
+}
+
+.wp-block-post-title a:hover {
+  color: #cca13f;
+}
+
+/* Prix */
+.wp-block-woocommerce-product-price {
+  text-align: center;
+  margin: 10px 0;
+  padding: 0 15px;
+}
+
+.wc-block-components-product-price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.woocommerce-Price-amount {
+  color: #cca13f;
+}
+
+/* Bouton ajouter au panier */
+.wc-block-components-product-button {
+  padding: 0 15px 20px 15px;
+  margin: 0;
+}
+
+.wc-block-components-product-button__button {
+  width: 100%;
+  background-color: #cca13f;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.wc-block-components-product-button__button:hover {
+  background-color: #13454a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+}
+
+.wc-block-components-product-button__button:active {
+  transform: translateY(0);
+}
+
+/* Catégories/Tags (si visibles) */
+.product_cat-box-particulier,
+.product_cat-non-classe {
+  position: relative;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .wc-block-product-template__responsive.columns-3 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wc-block-product-template__responsive.columns-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  .wp-block-post-title {
+    font-size: 16px;
+  }
+  .wc-block-components-product-price {
+    font-size: 18px;
+  }
+}
+/* Animation de chargement lazy */
+.wc-block-components-product-image img.lazyloaded {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Style pour les badges (si présents) */
+.wc-block-components-product-image__badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #cca13f;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* Ajustement pour l'alignement du texte */
+.has-text-align-center {
+  text-align: center !important;
+}
+
+/* Assurer une hauteur consistante pour les cartes */
+.wc-block-product {
+  display: flex;
+  flex-direction: column;
+}
+
+.wc-block-components-product-image {
+  flex-shrink: 0;
+}
+
+.wp-block-post-title,
+.wp-block-woocommerce-product-price,
+.wc-block-components-product-button {
+  flex-shrink: 0;
+}
+
 body {
   line-height: 1.6em !important;
 }
