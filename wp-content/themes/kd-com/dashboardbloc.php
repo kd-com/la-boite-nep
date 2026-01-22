@@ -128,24 +128,7 @@ function kd_render_my_dashboard_widget() {
       <div style="background-color: white; margin: 5% auto; padding: 30px; border-radius: 8px; width: 90%; max-width: 600px; position: relative;">
         <span onclick="document.getElementById('kd-support-form-modal').style.display='none'" style="position: absolute; right: 20px; top: 15px; font-size: 28px; font-weight: bold; cursor: pointer; color: #999;">&times;</span>
         <h3 style="margin-top: 0; color: #1a2332;">Demande de support</h3>
-        <form id="kd-support-form" method="post" action="">
-          <input type="hidden" name="kd_support_nonce" value="<?php echo wp_create_nonce('kd_support_form'); ?>">
-          <p>
-            <label for="kd-name" style="display: block; margin-bottom: 5px; font-weight: bold;">Votre nom *</label>
-            <input type="text" id="kd-name" name="kd_name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-          </p>
-          <p>
-            <label for="kd-email" style="display: block; margin-bottom: 5px; font-weight: bold;">Votre email *</label>
-            <input type="email" id="kd-email" name="kd_email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
-          </p>
-          <p>
-            <label for="kd-message" style="display: block; margin-bottom: 5px; font-weight: bold;">Votre message *</label>
-            <textarea id="kd-message" name="kd_message" rows="6" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;"></textarea>
-          </p>
-          <p>
-            <button type="submit" name="kd_submit_support" class="button button-primary" style="padding: 10px 20px;">Envoyer la demande</button>
-          </p>
-        </form>
+        <iframe src="https://ubiquitous-wallaby-823.notion.site/ebd//8b656f12f65e4f028630067a133a550e" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
    
